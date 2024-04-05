@@ -1,4 +1,4 @@
-module github.com/quiqupltd/maroto/v2
+module github.com/johnfercher/maroto/v2
 
 go 1.21.1
 
@@ -7,7 +7,6 @@ require (
 	github.com/f-amaral/go-async v0.3.0
 	github.com/google/uuid v1.5.0
 	github.com/johnfercher/go-tree v1.0.5
-	github.com/johnfercher/maroto/v2 v2.0.0-00010101000000-000000000000
 	github.com/jung-kurt/gofpdf v1.16.2
 	github.com/pdfcpu/pdfcpu v0.6.0
 	github.com/stretchr/testify v1.8.4
@@ -27,5 +26,3 @@ require (
 	golang.org/x/text v0.14.0 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 )
-
-replace github.com/johnfercher/maroto/v2 => .
