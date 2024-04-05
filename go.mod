@@ -26,3 +26,5 @@ require (
 	golang.org/x/text v0.14.0 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 )
+
+replace github.com/johnfercher/maroto/v2 => github.com/quiqupltd/maroto/v2 v2.0.0-beta.17
