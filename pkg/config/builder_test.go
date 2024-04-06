@@ -280,7 +280,7 @@ func TestBuilder_WithMargins(t *testing.T) {
 		sut := config.NewBuilder()
 
 		// Act
-		cfg := sut.WithMargins(-1, 20, 20).Build()
+		cfg := sut.WithMargins(-1, 20, 20, pagesize.DefaultBottomMargin).Build()
 
 		// Assert
 		assert.Equal(t, 10.0, cfg.Margins.Left)
@@ -293,7 +293,7 @@ func TestBuilder_WithMargins(t *testing.T) {
 		sut := config.NewBuilder()
 
 		// Act
-		cfg := sut.WithMargins(20, 20, -1).Build()
+		cfg := sut.WithMargins(20, 20, -1, pagesize.DefaultBottomMargin).Build()
 
 		// Assert
 		assert.Equal(t, 10.0, cfg.Margins.Left)
@@ -306,7 +306,7 @@ func TestBuilder_WithMargins(t *testing.T) {
 		sut := config.NewBuilder()
 
 		// Act
-		cfg := sut.WithMargins(20, -1, 20).Build()
+		cfg := sut.WithMargins(20, -1, 20, pagesize.DefaultBottomMargin).Build()
 
 		// Assert
 		assert.Equal(t, 10.0, cfg.Margins.Left)
@@ -319,12 +319,13 @@ func TestBuilder_WithMargins(t *testing.T) {
 		sut := config.NewBuilder()
 
 		// Act
-		cfg := sut.WithMargins(20, 20, 20).Build()
+		cfg := sut.WithMargins(20, 20, 20, pagesize.DefaultBottomMargin).Build()
 
 		// Assert
 		assert.Equal(t, 20.0, cfg.Margins.Left)
 		assert.Equal(t, 20.0, cfg.Margins.Top)
 		assert.Equal(t, 20.0, cfg.Margins.Right)
+		assert.Equal(t, pagesize.DefaultBottomMargin, cfg.Margins.Bottom)
 	})
 }
 

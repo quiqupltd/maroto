@@ -5,6 +5,7 @@ import (
 	"os"
 
 	"github.com/johnfercher/maroto/v2/pkg/consts/extension"
+	"github.com/johnfercher/maroto/v2/pkg/consts/pagesize"
 
 	"github.com/johnfercher/maroto/v2"
 	"github.com/johnfercher/maroto/v2/pkg/config"
@@ -39,7 +40,7 @@ func GetMaroto(image string) core.Maroto {
 		log.Fatal(err)
 	}
 	b := config.NewBuilder().
-		WithMargins(0, 0, 0).
+		WithMargins(0, 0, 0, pagesize.DefaultBottomMargin).
 		WithDimensions(361.8, 203.2).
 		WithDisableAutoPageBreak(true).
 		WithOrientation(orientation.Horizontal).

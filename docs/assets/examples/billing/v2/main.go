@@ -12,6 +12,7 @@ import (
 	"github.com/johnfercher/maroto/v2/pkg/components/text"
 	"github.com/johnfercher/maroto/v2/pkg/consts/align"
 	"github.com/johnfercher/maroto/v2/pkg/consts/fontstyle"
+	"github.com/johnfercher/maroto/v2/pkg/consts/pagesize"
 
 	"github.com/johnfercher/maroto/v2/pkg/config"
 	"github.com/johnfercher/maroto/v2/pkg/core"
@@ -39,7 +40,7 @@ func main() {
 func GetMaroto() core.Maroto {
 	cfg := config.NewBuilder().
 		WithPageNumber("Page {current} of {total}", props.RightBottom).
-		WithMargins(10, 15, 10).
+		WithMargins(10, 15, 10, pagesize.DefaultBottomMargin).
 		Build()
 
 	darkGrayColor := getDarkGrayColor()
